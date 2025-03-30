@@ -41,4 +41,50 @@ java {
 application {
     // Define the main class for the application.
     mainClass = 'org.example.App'
+
+}
+
+Plugins {
+id 'com.google.gms.google-services' version '4.4.2' apply false
+}
+
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services' // Firebase plugin
+}
+
+android {
+    namespace 'com.gibson.fobicx' // Change to your package name
+    compileSdk 34 // Set the appropriate SDK version
+
+    defaultConfig {
+        applicationId "com.gibson.fobicx"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    // Firebase BOM (manages Firebase versions)
+    implementation platform('com.google.firebase:firebase-bom:33.11.0') 
+
+    // Firebase Core
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth'
+
+    // Firestore Database
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // Firebase Realtime Database
+    implementation 'com.google.firebase:firebase-database'
+
+    // Firebase Cloud Storage
+    implementation 'com.google.firebase:firebase-storage'
+
+    // Firebase Messaging (Push Notifications)
+    implementation 'com.google.firebase:firebase-messaging'
 }
