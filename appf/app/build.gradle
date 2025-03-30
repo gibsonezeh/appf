@@ -59,7 +59,7 @@ android {
 
     defaultConfig {
         applicationId "com.gibson.fobicx"
-        minSdk 21
+        minSdk 7
         targetSdk 34
         versionCode 1
         versionName "1.0"
