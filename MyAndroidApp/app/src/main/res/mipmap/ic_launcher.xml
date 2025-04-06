@@ -1,0 +1,8 @@
+<resources>
+    <item>
+        <bitmap
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/ic_launcher_foreground"
+            android:gravity="center" />
+    </item>
+</resources>
