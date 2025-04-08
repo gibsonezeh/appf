@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+# Gradle wrapper script for Unix-based systems.
+# This script is used to invoke the Gradle build system.
+
+set -e
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+APP_NAME="my-android-app"
+
+if [ -z "$GRADLE_HOME" ]; then
+  GRADLE_HOME="$DIR/gradle"
+fi
+
+if [ -z "$GRADLE_OPTS" ]; then
+  GRADLE_OPTS=""
+fi
+
+exec "$GRADLE_HOME/bin/gradle" -Dorg.gradle.app.name="$APP_NAME" "$@"
