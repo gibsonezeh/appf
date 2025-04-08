@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+# Gradle wrapper script for Unix-like systems
+set -e
+
+GRADLE_USER_HOME="${GRADLE_USER_HOME:-$HOME/.gradle}"
+export GRADLE_USER_HOME
+
+DIR="$(cd "$(dirname "$0")/gradle/wrapper" && pwd)"
+if [ ! -f "$DIR/gradle-wrapper.jar" ]; then
+  echo "ERROR: gradle-wrapper.jar not found in $DIR"
+  exit 1
+fi
+
+exec java -jar "$DIR/gradle-wrapper.jar" "$@"
